@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>EasyTech Services - Soluciones Tecnológicas</title>
+    <meta name="description" content="EasyTech Services - Ofrecemos soluciones tecnológicas innovadoras para empresas. Desarrollo web, aplicaciones móviles, consultoría IT y más.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>EasyTech<span class="logo-accent">.services</span></h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#portafolio" class="nav-link">Portafolio</a></li>
+                    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <!-- Animated Background -->
+        <div class="hero-bg">
+            <div class="particles" id="particles"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+                <h1 class="hero-title animate__animated animate__fadeInUp">
+                    Soluciones Tecnológicas
+                    <span class="gradient-text typing-animation">Innovadoras</span>
+                </h1>
+                <p class="hero-description animate__animated animate__fadeInUp animate__delay-1s">
+                    Transformamos ideas en realidad digital. Ofrecemos servicios de desarrollo web, 
+                    aplicaciones móviles, consultoría IT y soluciones tecnológicas personalizadas 
+                    para impulsar tu negocio.
+                </p>
+                <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                    <a href="#servicios" class="btn btn-primary btn-hover-effect">
+                        <span>Nuestros Servicios</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contacto" class="btn btn-secondary btn-hover-effect">
+                        <span>Contactar</span>
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+                
+                <!-- Stats Counter -->
+                <div class="hero-stats animate__animated animate__fadeInUp animate__delay-3s">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-label">Proyectos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="30">0</span>
+                        <span class="stat-label">Clientes</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="5">0</span>
+                        <span class="stat-label">Años</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
+                <div class="tech-illustration">
+                    <div class="tech-icon tech-icon-1">
+                        <i class="fas fa-laptop-code"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <div class="tech-icon tech-icon-2">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <div class="tech-icon tech-icon-3">
+                        <i class="fas fa-cloud"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <div class="tech-icon tech-icon-4">
+                        <i class="fas fa-database"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <div class="tech-icon tech-icon-5">
+                        <i class="fas fa-robot"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <div class="tech-icon tech-icon-6">
+                        <i class="fas fa-shield-alt"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <span>Scroll para explorar</span>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <p class="section-description">
+                    Ofrecemos una gama completa de servicios tecnológicos para satisfacer 
+                    las necesidades de tu empresa
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Desarrollo Web</h3>
+                    <p>Sitios web modernos, responsivos y optimizados para SEO. Desde landing pages hasta aplicaciones web complejas.</p>
+                    <ul class="service-features">
+                        <li>React, Vue, Angular</li>
+                        <li>Node.js, Python, PHP</li>
+                        <li>Bases de datos optimizadas</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Aplicaciones Móviles</h3>
+                    <p>Apps nativas e híbridas para iOS y Android. Experiencia de usuario excepcional en todos los dispositivos.</p>
+                    <ul class="service-features">
+                        <li>React Native, Flutter</li>
+                        <li>iOS y Android</li>
+                        <li>Integración con APIs</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Computing</h3>
+                    <p>Migración y gestión en la nube. Optimización de costos y escalabilidad para tu infraestructura.</p>
+                    <ul class="service-features">
+                        <li>AWS, Google Cloud, Azure</li>
+                        <li>Docker y Kubernetes</li>
+                        <li>Monitoreo y seguridad</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Consultoría IT</h3>
+                    <p>Análisis y optimización de procesos tecnológicos. Estrategias digitales para el crecimiento empresarial.</p>
+                    <ul class="service-features">
+                        <li>Auditoría tecnológica</li>
+                        <li>Transformación digital</li>
+                        <li>Capacitación de equipos</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Ciberseguridad</h3>
+                    <p>Protección integral de datos y sistemas. Implementación de mejores prácticas de seguridad.</p>
+                    <ul class="service-features">
+                        <li>Auditorías de seguridad</li>
+                        <li>Penetration testing</li>
+                        <li>Compliance y normativas</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Automatización</h3>
+                    <p>Automatización de procesos empresariales. Aumenta la eficiencia y reduce errores manuales.</p>
+                    <ul class="service-features">
+                        <li>RPA (Robotic Process Automation)</li>
+                        <li>Workflows inteligentes</li>
+                        <li>Integración de sistemas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portafolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestro Portafolio</h2>
+                <p class="section-description">
+                    Proyectos desarrollados con las últimas tecnologías. 
+                    Cada aplicación está diseñada para resolver problemas reales y mejorar la experiencia del usuario.
+                </p>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Club VIP Mariachi Sol del Águila -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image club-vip">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Sistema de Fidelización: Club VIP Mariachi Sol del Águila</h3>
+                        <span class="portfolio-status status-progress">Activo</span>
+                        <p class="portfolio-description">
+                            Sistema completo de fidelización para el Club VIP del Mariachi Sol del Águila. 
+                            Incluye gestión de membresías, puntos de recompensa y beneficios exclusivos.
+                        </p>
+                        <div class="portfolio-links">
+                            <a href="club-vip-detail.html" class="portfolio-link">Ver Detalles</a>
+                            <a href="https://mariachisoldelaguila.com" target="_blank" rel="noopener noreferrer" class="portfolio-link">Ver Sitio Web</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEA Edition -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image tea-edition">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">TEA Edition</h3>
+                        <span class="portfolio-status status-progress">Activo</span>
+                        <p class="portfolio-description">
+                            Plataforma educativa especializada en desarrollo infantil. 
+                            Recursos y herramientas para padres y educadores.
+                        </p>
+                        <div class="portfolio-links">
+                            <a href="https://1bedkids.org" target="_blank" rel="noopener noreferrer" class="portfolio-link">Ver Sitio Web</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EasyTech Desk -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">EasyTech Desk</h3>
+                        <span class="portfolio-status status-progress">Activo</span>
+                        <p class="portfolio-description">
+                            Sistema de escritorio para gestión interna de EasyTech. 
+                            Herramientas de administración, reportes y control de proyectos.
+                        </p>
+                        <div class="portfolio-links">
+                            <a href="#" class="portfolio-link">En Desarrollo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ODOO-18 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image odoo">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">ODOO-18</h3>
+                        <span class="portfolio-status status-completed">Completado</span>
+                        <p class="portfolio-description">
+                            Implementación completa de Odoo 18 para gestión empresarial. 
+                            ERP personalizado con módulos de contabilidad, inventario y CRM.
+                        </p>
+                        <div class="portfolio-links">
+                            <a href="odoo18-detail.html" class="portfolio-link">Ver Detalles</a>
+                            <a href="https://app.easytech.services" target="_blank" rel="noopener noreferrer" class="portfolio-link">Ver App</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Services -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">WhatsApp Services</h3>
+                        <span class="portfolio-status status-progress">Activo</span>
+                        <p class="portfolio-description">
+                            API de servicios de WhatsApp para automatización de mensajes, 
+                            notificaciones y atención al cliente automatizada.
+                        </p>
+                        <div class="portfolio-links">
+                            <a href="whatsapp-services-detail.html" class="portfolio-link">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Better Every Day -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Better Every Day</h3>
+                        <span class="portfolio-status status-progress">Activo</span>
+                        <p class="portfolio-description">
+                            Aplicación de productividad y mejora personal. 
+                            Sistema de seguimiento de hábitos y metas con análisis de progreso.
+                        </p>
+                        <div class="portfolio-links">
+                            <a href="#" class="portfolio-link">En Desarrollo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estado Cuenta API - LEVR -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image estado-cuenta">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Estado Cuenta API - LEVR</h3>
+                        <span class="portfolio-status status-completed">Completado</span>
+                        <p class="portfolio-description">
+                            API para consulta de estados de cuenta financieros. 
+                            Integración con sistemas bancarios y generación de reportes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Chopper Mobile App -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image chopper">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Chopper Mobile App</h3>
+                        <span class="portfolio-status status-vitrina">Activo</span>
+                        <p class="portfolio-description">
+                            Aplicación móvil para servicios de delivery y transporte. 
+                            Conecta usuarios con conductores de motocicletas.
+                        </p>
+                        <div class="portfolio-links">
+                            <a href="https://chopper.easytech.services" target="_blank" rel="noopener noreferrer" class="portfolio-link">Ver App</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chopper Platform -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image chopper">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Chopper Platform</h3>
+                        <span class="portfolio-status status-vitrina">Activo</span>
+                        <p class="portfolio-description">
+                            Plataforma web para administración del servicio Chopper. 
+                            Panel de control para conductores y administradores.
+                        </p>
+                        <div class="portfolio-links">
+                            <a href="https://chopper.easytech.services" target="_blank" rel="noopener noreferrer" class="portfolio-link">Ver Plataforma</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comuniapp Flask -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Comuniapp Flask</h3>
+                        <span class="portfolio-status status-progress">Activo</span>
+                        <p class="portfolio-description">
+                            Aplicación de comunicación desarrollada en Flask. 
+                            Sistema de mensajería y notificaciones en tiempo real.
+                        </p>
+                        <div class="portfolio-links">
+                            <a href="#" class="portfolio-link">En Desarrollo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Master Call -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image mastercall">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Master Call</h3>
+                        <span class="portfolio-status status-completed">Completado</span>
+                        <p class="portfolio-description">
+                            Sistema de gestión de llamadas y comunicación empresarial. 
+                            Integración con múltiples canales de comunicación.
+                        </p>
+                        <div class="portfolio-links">
+                            <a href="https://mastercall.app" target="_blank" rel="noopener noreferrer" class="portfolio-link">Ver Sistema</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teachercracks.site -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image teachercracks">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Teachercracks.site</h3>
+                        <span class="portfolio-status status-completed">Completado</span>
+                        <p class="portfolio-description">
+                            Plataforma educativa para profesores y estudiantes. 
+                            Recursos, herramientas y comunidad educativa en línea.
+                        </p>
+                        <div class="portfolio-links">
+                            <a href="https://teachercracks.site" target="_blank" rel="noopener noreferrer" class="portfolio-link">Ver Plataforma</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">¿Por qué elegir EasyTech?</h2>
+                    <p class="about-description">
+                        Somos un equipo de profesionales apasionados por la tecnología, 
+                        comprometidos con la excelencia y la innovación. Nuestra misión 
+                        es ayudar a las empresas a alcanzar sus objetivos digitales.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-rocket"></i>
+                            <div>
+                                <h4>Innovación Constante</h4>
+                                <p>Utilizamos las últimas tecnologías y metodologías del mercado</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Equipo Experto</h4>
+                                <p>Profesionales certificados con años de experiencia en el sector</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Entrega Puntual</h4>
+                                <p>Cumplimos con los plazos establecidos sin comprometer la calidad</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <h4>Soporte 24/7</h4>
+                                <p>Asistencia técnica continua para garantizar el funcionamiento óptimo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Proyectos Completados</p>
+                    </div>
+                    <div class="stat">
+                        <h3>30+</h3>
+                        <p>Clientes Satisfechos</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5+</h3>
+                        <p>Años de Experiencia</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Completado</h3>
+                        <p>Satisfacción del Cliente</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Comunícate con Nosotros</h2>
+                <p class="section-description">
+                    ¿Listo para transformar tu negocio? Contáctanos y hablemos sobre tu proyecto. 
+                    Ofrecemos múltiples canales de comunicación para tu comodidad.
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Principal</h4>
+                            <p>info@easytech.services</p>
+                            <small>Respuesta en 24 horas</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+507 6184-2170</p>
+                            <small>Lun - Vie: 9:00 - 18:00</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+507 6974-4086</p>
+                            <small>Respuesta inmediata</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-video"></i>
+                        <div>
+                            <h4>Videollamada</h4>
+                            <p>Consulta gratuita</p>
+                            <small>Agenda tu cita</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Ubicación</h4>
+                            <p>PH, Camino de Cruces<br>Boulevard el Dorado, local 31<br>Panamá</p>
+                            <small>Visitas con cita previa</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horario de Atención</h4>
+                            <p>Lun - Vie: 9:00 - 18:00</p>
+                            <small>Sáb: 10:00 - 14:00</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-section">
+                    <h3>Envíanos un Mensaje</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Tu email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="Tu teléfono (opcional)">
+                            </div>
+                            <div class="form-group">
+                                <select id="service" name="service" required>
+                                    <option value="">Selecciona un servicio</option>
+                                    <option value="desarrollo-web">Desarrollo Web</option>
+                                    <option value="apps-moviles">Aplicaciones Móviles</option>
+                                    <option value="cloud-computing">Cloud Computing</option>
+                                    <option value="consultoria-it">Consultoría IT</option>
+                                    <option value="ciberseguridad">Ciberseguridad</option>
+                                    <option value="automatizacion">Automatización</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Asunto del mensaje" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Cuéntanos sobre tu proyecto..." rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Quiero recibir noticias sobre EasyTech Services
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Additional Contact Options -->
+            <div class="contact-options">
+                <div class="contact-option">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h4>Consulta Gratuita</h4>
+                    <p>Agenda una videollamada de 30 minutos para discutir tu proyecto</p>
+                    <a href="#" class="btn btn-secondary">Agendar Cita</a>
+                </div>
+                <div class="contact-option">
+                    <i class="fas fa-file-alt"></i>
+                    <h4>Cotización Rápida</h4>
+                    <p>Obtén una cotización preliminar en menos de 24 horas</p>
+                    <a href="#" class="btn btn-secondary">Solicitar Cotización</a>
+                </div>
+                <div class="contact-option">
+                    <i class="fas fa-comments"></i>
+                    <h4>Chat en Vivo</h4>
+                    <p>Habla directamente con nuestro equipo de soporte</p>
+                    <a href="#" class="btn btn-secondary">Iniciar Chat</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EasyTech<span class="logo-accent">.services</span></h3>
+                    <p>Transformando ideas en soluciones tecnológicas innovadoras.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Desarrollo Web</a></li>
+                        <li><a href="#servicios">Apps Móviles</a></li>
+                        <li><a href="#servicios">Cloud Computing</a></li>
+                        <li><a href="#servicios">Consultoría IT</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Carreras</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-envelope"></i> info@easytech.services</p>
+                    <p><i class="fas fa-phone"></i> +507 6184-2170</p>
+                    <p><i class="fab fa-whatsapp"></i> +507 6974-4086</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EasyTech Services. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Chatbot -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <div class="chatbot-avatar charlie-avatar">
+                <div class="charlie-face">
+                    <div class="charlie-eyes">
+                        <div class="charlie-eye"></div>
+                        <div class="charlie-eye"></div>
+                    </div>
+                    <div class="charlie-smile"></div>
+                </div>
+            </div>
+            <div class="chatbot-info">
+                <h4>Charlie Pity Assistant</h4>
+                <span class="status">En línea</span>
+            </div>
+            <button class="chatbot-close" id="chatbotClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>¡Hola! 👋 Soy Charlie Pity Assistant, el asistente virtual de EasyTech Services. Puedo responder tus preguntas básicas o conectarte directamente con nuestro equipo por WhatsApp para consultas específicas. ¿En qué puedo ayudarte?</p>
+                </div>
+                <div class="message-time">Ahora</div>
+            </div>
+        </div>
+        
+        <div class="chatbot-quick-questions">
+            <button class="quick-question" data-question="servicios">¿Qué servicios ofrecen?</button>
+            <button class="quick-question" data-question="cotizacion">Quiero una cotización</button>
+            <button class="quick-question" data-question="proyecto">Tengo un proyecto</button>
+            <button class="quick-question" data-question="soporte">Necesito soporte</button>
+        </div>
+        
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Escribe tu mensaje...">
+            <button id="chatbotSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Chatbot Toggle Button -->
+    <div class="chatbot-toggle" id="chatbotToggle">
+        <i class="fas fa-robot"></i>
+        <span class="chatbot-badge">CP</span>
+    </div>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+        
+        // Simple Mariachi Demo Function
+        function openMariachiDemo() {
+            window.open('https://mariachisoldelaguila.com', '_blank', 'width=1200,height=800');
+        }
+    </script>
+</body>
+</html>
