@@ -7,24 +7,72 @@ navToggle.addEventListener('click', () => {
     navToggle.classList.toggle('active');
 });
 
-// Close mobile menu when clicking on a link
+// Dropdown menu functionality
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const dropdown = toggle.closest('.nav-item-dropdown');
+        const isActive = dropdown.classList.contains('active');
+        
+        // Close all other dropdowns
+        document.querySelectorAll('.nav-item-dropdown').forEach(item => {
+            if (item !== dropdown) {
+                item.classList.remove('active');
+            }
+        });
+        
+        // Toggle current dropdown
+        dropdown.classList.toggle('active', !isActive);
+    });
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-item-dropdown')) {
+        document.querySelectorAll('.nav-item-dropdown').forEach(item => {
+            item.classList.remove('active');
+        });
+    }
+});
+
+// Close mobile menu when clicking on a link (except dropdown toggle)
 document.querySelectorAll('.nav-link').forEach(link => {
+    if (!link.classList.contains('dropdown-toggle')) {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+        });
+    }
+});
+
+// Close mobile menu when clicking on dropdown links
+document.querySelectorAll('.dropdown-link').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         navToggle.classList.remove('active');
+        // Close all dropdowns
+        document.querySelectorAll('.nav-item-dropdown').forEach(item => {
+            item.classList.remove('active');
+        });
     });
 });
 
 // Smooth scrolling for navigation links (only for internal page links that start with #)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+        const href = this.getAttribute('href');
+        // Only prevent default if it's an anchor on the same page
+        if (href.startsWith('#') && href.length > 1) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                const headerHeight = document.querySelector('.header')?.offsetHeight || 70;
+                const targetPosition = target.offsetTop - headerHeight;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
         }
     });
 });
@@ -941,8 +989,56 @@ function initChatbot() {
     });
 }
 
+// Set active navigation link based on current page
+function setActiveNavLink() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    // Reset all nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+    });
+    
+    // Reset all dropdowns
+    document.querySelectorAll('.nav-item-dropdown').forEach(dropdown => {
+        dropdown.classList.remove('active');
+    });
+    
+    // Check main nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+        const linkHref = link.getAttribute('href');
+        if (linkHref === currentPage || (currentPage === '' && linkHref === 'index.html')) {
+            link.classList.add('active');
+            // If it's in a dropdown, activate the dropdown
+            const dropdown = link.closest('.nav-item-dropdown');
+            if (dropdown) {
+                dropdown.classList.add('active');
+            }
+        }
+    });
+    
+    // Check dropdown links
+    document.querySelectorAll('.dropdown-link').forEach(link => {
+        const linkHref = link.getAttribute('href');
+        if (linkHref === currentPage) {
+            link.classList.add('active');
+            // Activate the parent dropdown
+            const dropdown = link.closest('.nav-item-dropdown');
+            if (dropdown) {
+                dropdown.classList.add('active');
+                // Also mark the dropdown toggle as active
+                const toggle = dropdown.querySelector('.dropdown-toggle');
+                if (toggle) {
+                    toggle.classList.add('active');
+                }
+            }
+        }
+    });
+}
+
 // Initialize page
 document.addEventListener('DOMContentLoaded', function() {
+    // Set active nav link
+    setActiveNavLink();
     // Initialize all animations
     createParticles();
     initTypingAnimation();
@@ -967,4 +1063,73 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('EasyTech Services website loaded successfully! 🚀');
     console.log('Advanced animations initialized ✨');
     console.log('Chatbot initialized 🤖');
+    
+    // Package CTA buttons - Pre-fill form
+    document.querySelectorAll('.btn-package-cta').forEach(button => {
+        button.addEventListener('click', function(e) {
+            const packageType = this.getAttribute('data-package');
+            const serviceSelect = document.getElementById('service');
+            const asesoriaCheckbox = document.getElementById('asesoria');
+            
+            if (serviceSelect && packageType) {
+                // Map package types to form values
+                const packageMap = {
+                    'landing-page': 'landing-page',
+                    'sitio-corporativo': 'sitio-corporativo',
+                    'portal-corporativo': 'portal-corporativo'
+                };
+                
+                if (packageMap[packageType]) {
+                    serviceSelect.value = packageMap[packageType];
+                    // Trigger change event to update form
+                    serviceSelect.dispatchEvent(new Event('change'));
+                }
+            }
+            
+            // Auto-check asesoría if available
+            if (asesoriaCheckbox) {
+                asesoriaCheckbox.checked = true;
+            }
+            
+            // Scroll to form after a short delay
+            setTimeout(() => {
+                const contactSection = document.getElementById('contacto');
+                if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 100);
+        });
+    });
+    
+    // Asesoría link in contact info
+    const asesoriaLink = document.querySelector('.btn-asesoria-link');
+    if (asesoriaLink) {
+        asesoriaLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const serviceSelect = document.getElementById('service');
+            const asesoriaCheckbox = document.getElementById('asesoria');
+            
+            if (serviceSelect) {
+                serviceSelect.value = 'asesoria-gratuita';
+                serviceSelect.dispatchEvent(new Event('change'));
+            }
+            
+            if (asesoriaCheckbox) {
+                asesoriaCheckbox.checked = true;
+            }
+            
+            // Scroll to form
+            setTimeout(() => {
+                const form = document.getElementById('contactForm');
+                if (form) {
+                    form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    // Focus on name field
+                    const nameField = document.getElementById('name');
+                    if (nameField) {
+                        setTimeout(() => nameField.focus(), 500);
+                    }
+                }
+            }, 100);
+        });
+    }
 });

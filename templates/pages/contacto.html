@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+
+{% block title %}Contacto - EasyTech Services | Cotización en 24h | Asesoría Gratuita{% endblock %}
+{% block description %}Contacta con EasyTech Services. Solicita tu cotización en 2 minutos. Respuesta en 24 horas. Email: info@easytech.services, WhatsApp: +507 6974-4086.{% endblock %}
+{% block keywords %}contacto easytech, cotización desarrollo web panamá, asesoría gratuita, consultoría IT panamá{% endblock %}
+{% block canonical_url %}/contacto.html{% endblock %}
+{% block og_url %}/contacto.html{% endblock %}
+{% block og_title %}Contacto - EasyTech Services | Cotización en 24h{% endblock %}
+{% block og_description %}Solicita tu cotización en 2 minutos. Respuesta en 24 horas. Email: info@easytech.services, WhatsApp: +507 6974-4086.{% endblock %}
+{% block twitter_title %}Contacto - EasyTech Services{% endblock %}
+{% block twitter_description %}Solicita tu cotización en 2 minutos. Respuesta en 24 horas. Asesoría gratuita.{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+    <section class="page-header" style="padding: 80px 0 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Comunícate con Nosotros</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">¿Listo para transformar tu negocio? Contáctanos y hablemos sobre tu proyecto.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" style="padding: 80px 0;">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Principal</h4>
+                            <p>info@easytech.services</p>
+                            <small>Respuesta en 24 horas</small>
+                        </div>
+                    </div>
+                    <div class="contact-item" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+507 6184-2170</p>
+                            <small>Lun - Vie: 9:00 - 18:00</small>
+                        </div>
+                    </div>
+                    <div class="contact-item" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+507 6974-4086</p>
+                            <small>Respuesta inmediata</small>
+                        </div>
+                    </div>
+                    <div class="contact-item highlight-item" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-calendar-check"></i>
+                        <div>
+                            <h4>Asesoría Gratuita</h4>
+                            <p>Consulta sin costo</p>
+                            <small>Agenda tu cita de asesoría</small>
+                            <a href="#contactForm" class="btn-asesoria-link">Solicitar Ahora</a>
+                        </div>
+                    </div>
+                    <div class="contact-item" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-video"></i>
+                        <div>
+                            <h4>Videollamada</h4>
+                            <p>Consulta gratuita</p>
+                            <small>Agenda tu cita</small>
+                        </div>
+                    </div>
+                    <div class="contact-item" data-aos="fade-up" data-aos-delay="600">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Ubicación</h4>
+                            <p>PH, Camino de Cruces<br>Boulevard el Dorado, local 31<br>Panamá</p>
+                            <small>Visitas con cita previa</small>
+                        </div>
+                    </div>
+                    <div class="contact-item" data-aos="fade-up" data-aos-delay="700">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horario de Atención</h4>
+                            <p>Lun - Vie: 9:00 - 18:00</p>
+                            <small>Sáb: 10:00 - 14:00</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-section" data-aos="fade-left" data-aos-duration="800">
+                    <h3>Solicita tu Cotización en 2 Minutos</h3>
+                    <p class="form-description">
+                        Completa este formulario corto y recibe una <strong>cotización en 24 horas</strong>. 
+                        <strong>Asesoría gratuita</strong> incluida. Sin compromisos.
+                    </p>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Tu email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Tu teléfono (opcional)">
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">¿Qué servicio necesitas?</option>
+                                <optgroup label="Desarrollo Web">
+                                    <option value="landing-page">Landing Page (Desde $250)</option>
+                                    <option value="sitio-corporativo">Sitio Web Corporativo (Desde $600)</option>
+                                    <option value="portal-corporativo">Portal Corporativo (Desde $999)</option>
+                                </optgroup>
+                                <optgroup label="Otros Servicios">
+                                    <option value="tienda-online">Tienda Online / E-commerce</option>
+                                    <option value="odoo-crm">Integración Odoo / CRM</option>
+                                    <option value="apps-moviles">Aplicaciones Móviles</option>
+                                    <option value="automatizacion">Automatización</option>
+                                    <option value="asesoria-gratuita">Asesoría Gratuita</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Cuéntanos brevemente sobre tu proyecto..." rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="asesoria" name="asesoria" value="si" checked>
+                                <span class="checkmark"></span>
+                                Quiero agendar una <strong>videollamada gratuita</strong> de 30 minutos
+                            </label>
+                        </div>
+                        <div class="form-note">
+                            <i class="fas fa-shield-alt"></i>
+                            <small>Tu información está segura. Respondemos en menos de 24 horas.</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit-large">
+                            <span>Solicitar Cotización Ahora</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #6b7280;">
+                            O contáctanos directamente por 
+                            <a href="https://wa.me/50769744086?text=Hola%20EasyTech,%20quiero%20una%20cotización" target="_blank" rel="noopener noreferrer" style="color: #25D366; font-weight: 600;">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Additional Contact Options -->
+            <div class="contact-options" style="margin-top: 4rem;">
+                <div class="contact-option" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h4>Consulta Gratuita</h4>
+                    <p>Agenda una videollamada de 30 minutos para discutir tu proyecto</p>
+                    <a href="https://wa.me/50769744086?text=Hola%20EasyTech,%20quiero%20agendar%20una%20consulta%20gratuita" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Agendar Cita</a>
+                </div>
+                <div class="contact-option" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-file-alt"></i>
+                    <h4>Cotización Rápida</h4>
+                    <p>Obtén una cotización preliminar en menos de 24 horas</p>
+                    <a href="https://wa.me/50769744086?text=Hola%20EasyTech,%20necesito%20una%20cotización" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Solicitar Cotización</a>
+                </div>
+                <div class="contact-option" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-comments"></i>
+                    <h4>Chat en Vivo</h4>
+                    <p>Habla directamente con nuestro equipo de soporte</p>
+                    <a href="https://wa.me/50769744086" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Iniciar Chat</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

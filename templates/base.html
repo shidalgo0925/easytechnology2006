@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- SEO Meta Tags -->
+    <title>{% block title %}EasyTech Services - Soluciones Tecnológicas{% endblock %}</title>
+    <meta name="description" content="{% block description %}EasyTech Services - Ofrecemos soluciones tecnológicas innovadoras para empresas. Desarrollo web, aplicaciones móviles, consultoría IT y más.{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}desarrollo web, aplicaciones móviles, cloud computing, consultoría IT, ciberseguridad, automatización, Panamá{% endblock %}">
+    <meta name="author" content="EasyTech Services">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://easytech.services{% block canonical_url %}/{% endblock %}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://easytech.services{% block og_url %}/{% endblock %}">
+    <meta property="og:title" content="{% block og_title %}EasyTech Services - Soluciones Tecnológicas{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Transformamos ideas en realidad digital. Desarrollo web profesional con diseñador gráfico incluido.{% endblock %}">
+    <meta property="og:image" content="https://easytech.services/assets/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://easytech.services{% block twitter_url %}/{% endblock %}">
+    <meta property="twitter:title" content="{% block twitter_title %}EasyTech Services{% endblock %}">
+    <meta property="twitter:description" content="{% block twitter_description %}Soluciones tecnológicas innovadoras para empresas{% endblock %}">
+    <meta property="twitter:image" content="https://easytech.services/assets/images/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.png">
+    <link rel="shortcut icon" href="assets/images/logo.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{% block css_path %}styles.css{% endblock %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    {% block extra_css %}{% endblock %}
+    
+    <!-- Schema.org Structured Data -->
+    {% block schema %}{% endblock %}
+</head>
+<body>
+    <!-- Include Header -->
+    {% include 'components/header.html' %}
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+    
+    <!-- Include Footer -->
+    {% include 'components/footer.html' %}
+    
+    <!-- Include Chatbot -->
+    {% include 'components/chatbot.html' %}
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+    
+    {% block extra_js %}{% endblock %}
+    
+    <!-- Default Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "EasyTech Services",
+        "url": "https://easytech.services",
+        "logo": "https://easytech.services/assets/images/logo.png",
+        "description": "Desarrollo web profesional en Panamá. Soluciones tecnológicas para empresas: sitios web, e-commerce, CRM, aplicaciones móviles.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "PH, Camino de Cruces, Boulevard el Dorado, local 31",
+            "addressLocality": "Panamá",
+            "addressCountry": "PA"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+507-6184-2170",
+            "contactType": "customer service",
+            "areaServed": "PA",
+            "availableLanguage": ["es", "en"]
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/easytech-services",
+            "https://twitter.com/easytechservices",
+            "https://github.com/easytech-services"
+        ]
+    }
+    </script>
+</body>
+</html>
+
