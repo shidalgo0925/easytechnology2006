@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - EasyTech Services | Guías de Desarrollo Web y Tecnología | Panamá{% endblock %}
+{% block description %}Blog de EasyTech Services. Guías prácticas sobre desarrollo web, e-commerce, CRM, automatización y tecnología para negocios en Panamá.{% endblock %}
+{% block keywords %}blog desarrollo web panamá, guías tecnología, cómo crear tienda online, qué es CRM, automatización procesos{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+    <section class="page-header" style="padding: 80px 0 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Blog</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Artículos, noticias y recursos sobre tecnología y desarrollo web</p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="section-title">Últimos Artículos</h2>
+                <p class="section-description">
+                    Mantente al día con las últimas tendencias en tecnología y desarrollo web
+                </p>
+            </div>
+            <div class="blog-grid" style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-image" style="height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px 12px 0 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="blog-content" style="padding: 1.5rem; background: white; border-radius: 0 0 12px 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <span class="blog-category" style="color: #2563eb; font-size: 0.875rem; font-weight: 600;">Desarrollo Web</span>
+                        <h3 style="margin: 0.75rem 0; font-size: 1.25rem; color: #1f2937;">Cuánto Cuesta Hacer un Sitio Web Profesional</h3>
+                        <p style="color: #6b7280; line-height: 1.6; margin-bottom: 1rem;">Guía completa de precios para desarrollo web en Panamá. Desde landing pages hasta portales corporativos. Qué incluye cada plan y cómo elegir el adecuado para tu negocio.</p>
+                        <a href="#" class="btn btn-secondary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                            Leer Más
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-image" style="height: 200px; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); border-radius: 12px 12px 0 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="blog-content" style="padding: 1.5rem; background: white; border-radius: 0 0 12px 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <span class="blog-category" style="color: #2563eb; font-size: 0.875rem; font-weight: 600;">E-commerce</span>
+                        <h3 style="margin: 0.75rem 0; font-size: 1.25rem; color: #1f2937;">Errores Comunes al Crear una Tienda Online</h3>
+                        <p style="color: #6b7280; line-height: 1.6; margin-bottom: 1rem;">Los 7 errores más comunes que cometen las empresas al crear su tienda online y cómo evitarlos. Aprende de los errores de otros para tener éxito desde el inicio.</p>
+                        <a href="#" class="btn btn-secondary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                            Leer Más
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-image" style="height: 200px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-radius: 12px 12px 0 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="blog-content" style="padding: 1.5rem; background: white; border-radius: 0 0 12px 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <span class="blog-category" style="color: #2563eb; font-size: 0.875rem; font-weight: 600;">CRM</span>
+                        <h3 style="margin: 0.75rem 0; font-size: 1.25rem; color: #1f2937;">Qué es un CRM y Cómo Ayuda a Vender Más</h3>
+                        <p style="color: #6b7280; line-height: 1.6; margin-bottom: 1rem;">Guía completa sobre CRM para pequeñas empresas. Qué es, cómo funciona y por qué puede aumentar tus ventas hasta en 30%. Casos reales de éxito.</p>
+                        <a href="#" class="btn btn-secondary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                            Leer Más
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="section-cta" style="margin-top: 3rem;">
+                <p style="color: #6b7280; margin-bottom: 1rem;">¿Tienes preguntas sobre desarrollo web o tecnología?</p>
+                <a href="contacto.html" class="btn btn-primary">
+                    Agenda una Consulta Gratuita
+                    <i class="fas fa-calendar-check"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block title %}Servicios - EasyTech Services | Desarrollo Web, Apps Móviles, Cloud Computing{% endblock %}
+{% block description %}Servicios tecnológicos profesionales: Desarrollo Web, Apps Móviles, Cloud Computing, Consultoría IT, Ciberseguridad y Automatización en Panamá.{% endblock %}
+{% block keywords %}servicios tecnológicos, desarrollo web, aplicaciones móviles, cloud computing, consultoría IT, ciberseguridad, automatización, Panamá{% endblock %}
+{% block canonical_url %}/servicios.html{% endblock %}
+{% block og_url %}/servicios.html{% endblock %}
+{% block og_title %}Servicios Tecnológicos - EasyTech Services Panamá{% endblock %}
+{% block og_description %}Desarrollo Web, Apps Móviles, Cloud Computing, Consultoría IT, Ciberseguridad y Automatización en Panamá.{% endblock %}
+{% block twitter_title %}Servicios Tecnológicos - EasyTech Services{% endblock %}
+{% block twitter_description %}Desarrollo Web, Apps Móviles, Cloud Computing y más servicios tecnológicos en Panamá.{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+    <section class="page-header" style="padding: 80px 0 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Nuestros Servicios</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Soluciones tecnológicas profesionales para transformar tu negocio</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" style="padding: 80px 0;">
+        <div class="container">
+            <div class="services-grid">
+                <!-- Desarrollo Web -->
+                <div class="service-card featured-service" id="desarrollo-web" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-badge">Más Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Desarrollo Web</h3>
+                    <p>Sitios web modernos, responsivos y optimizados para SEO. Desde landing pages hasta portales corporativos completos.</p>
+                    <div class="service-price-highlight">
+                        <span class="price-from">Desde</span>
+                        <span class="price-amount">$250</span>
+                    </div>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Diseño gráfico profesional incluido</li>
+                        <li><i class="fas fa-check"></i> Responsive (móvil, tablet, desktop)</li>
+                        <li><i class="fas fa-check"></i> Optimización SEO</li>
+                        <li><i class="fas fa-check"></i> Asesoría gratuita incluida</li>
+                        <li><i class="fas fa-check"></i> CMS personalizado</li>
+                        <li><i class="fas fa-check"></i> Integración con redes sociales</li>
+                    </ul>
+                    <a href="paquetes-web.html" class="btn btn-primary btn-service-cta">
+                        Ver Paquetes
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Apps Móviles -->
+                <div class="service-card" id="apps-moviles" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Aplicaciones Móviles</h3>
+                    <p>Apps nativas e híbridas para iOS y Android. Experiencia de usuario excepcional en todos los dispositivos.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> React Native, Flutter</li>
+                        <li><i class="fas fa-check"></i> iOS y Android</li>
+                        <li><i class="fas fa-check"></i> Integración con APIs</li>
+                        <li><i class="fas fa-check"></i> Diseño UI/UX profesional</li>
+                        <li><i class="fas fa-check"></i> Publicación en stores</li>
+                        <li><i class="fas fa-check"></i> Mantenimiento y actualizaciones</li>
+                    </ul>
+                    <a href="contacto.html" class="btn btn-secondary btn-service-cta">
+                        Solicitar Cotización
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Cloud Computing -->
+                <div class="service-card" id="cloud-computing" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Computing</h3>
+                    <p>Migración y gestión en la nube. Optimización de costos y escalabilidad para tu infraestructura.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> AWS, Google Cloud, Azure</li>
+                        <li><i class="fas fa-check"></i> Docker y Kubernetes</li>
+                        <li><i class="fas fa-check"></i> Monitoreo y seguridad</li>
+                        <li><i class="fas fa-check"></i> Migración de datos</li>
+                        <li><i class="fas fa-check"></i> Optimización de costos</li>
+                        <li><i class="fas fa-check"></i> Soporte 24/7</li>
+                    </ul>
+                    <a href="contacto.html" class="btn btn-secondary btn-service-cta">
+                        Solicitar Cotización
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Consultoría IT -->
+                <div class="service-card" id="consultoria-it" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Consultoría IT</h3>
+                    <p>Análisis y optimización de procesos tecnológicos. Estrategias digitales para el crecimiento empresarial.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Auditoría tecnológica</li>
+                        <li><i class="fas fa-check"></i> Transformación digital</li>
+                        <li><i class="fas fa-check"></i> Capacitación de equipos</li>
+                        <li><i class="fas fa-check"></i> Estrategia tecnológica</li>
+                        <li><i class="fas fa-check"></i> Optimización de procesos</li>
+                        <li><i class="fas fa-check"></i> Roadmap tecnológico</li>
+                    </ul>
+                    <a href="contacto.html" class="btn btn-secondary btn-service-cta">
+                        Solicitar Consultoría
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Ciberseguridad -->
+                <div class="service-card" id="ciberseguridad" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Ciberseguridad</h3>
+                    <p>Protección integral de datos y sistemas. Implementación de mejores prácticas de seguridad.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Auditorías de seguridad</li>
+                        <li><i class="fas fa-check"></i> Penetration testing</li>
+                        <li><i class="fas fa-check"></i> Compliance y normativas</li>
+                        <li><i class="fas fa-check"></i> Protección de datos</li>
+                        <li><i class="fas fa-check"></i> Monitoreo continuo</li>
+                        <li><i class="fas fa-check"></i> Plan de respuesta a incidentes</li>
+                    </ul>
+                    <a href="contacto.html" class="btn btn-secondary btn-service-cta">
+                        Solicitar Auditoría
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Automatización -->
+                <div class="service-card" id="automatizacion" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Automatización</h3>
+                    <p>Automatización de procesos empresariales. Aumenta la eficiencia y reduce errores manuales.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> RPA (Robotic Process Automation)</li>
+                        <li><i class="fas fa-check"></i> Workflows inteligentes</li>
+                        <li><i class="fas fa-check"></i> Integración de sistemas</li>
+                        <li><i class="fas fa-check"></i> Automatización de tareas</li>
+                        <li><i class="fas fa-check"></i> Reducción de costos</li>
+                        <li><i class="fas fa-check"></i> Aumento de productividad</li>
+                    </ul>
+                    <a href="contacto.html" class="btn btn-secondary btn-service-cta">
+                        Solicitar Cotización
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 80px 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">¿Listo para Transformar tu Negocio?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">Contáctanos y recibe una asesoría gratuita para tu proyecto</p>
+            <a href="contacto.html" class="btn btn-primary" style="background: #fbbf24; color: #1f2937; padding: 15px 40px; font-size: 1.1rem;">
+                Solicitar Asesoría Gratuita
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,61 @@
+<!-- Chatbot Component -->
+<div class="chatbot-container" id="chatbotContainer">
+    <div class="chatbot-header">
+        <div class="chatbot-avatar charlie-avatar">
+            <div class="charlie-face">
+                <div class="charlie-eyes">
+                    <div class="charlie-eye"></div>
+                    <div class="charlie-eye"></div>
+                </div>
+                <div class="charlie-smile"></div>
+            </div>
+        </div>
+        <div class="chatbot-info">
+            <h4>Charlie Pity Assistant</h4>
+            <span class="status">En línea</span>
+        </div>
+        <button class="chatbot-close" id="chatbotClose" aria-label="Cerrar chatbot">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    
+    <div class="chatbot-messages" id="chatbotMessages">
+        <div class="message bot-message">
+            <div class="message-content">
+                <p>¡Hola! 👋 Soy Charlie Pity Assistant, el asistente virtual de EasyTech Services. Puedo responder tus preguntas básicas o conectarte directamente con nuestro equipo por WhatsApp para consultas específicas. ¿En qué puedo ayudarte?</p>
+            </div>
+            <div class="message-time">Ahora</div>
+        </div>
+    </div>
+    
+    <div class="chatbot-quick-questions">
+        <button class="quick-question" data-question="servicios">¿Qué servicios ofrecen?</button>
+        <button class="quick-question" data-question="cotizacion">Quiero una cotización</button>
+        <button class="quick-question" data-question="proyecto">Tengo un proyecto</button>
+        <button class="quick-question" data-question="soporte">Necesito soporte</button>
+    </div>
+    
+    <div class="chatbot-input">
+        <input type="text" id="chatbotInput" placeholder="Escribe tu mensaje..." aria-label="Escribe tu mensaje">
+        <button id="chatbotSend" aria-label="Enviar mensaje">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+
+<!-- Chatbot Toggle Button -->
+<div class="chatbot-toggle" id="chatbotToggle" aria-label="Abrir chatbot">
+    <i class="fas fa-robot"></i>
+    <span class="chatbot-badge">CP</span>
+</div>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/50769744086?text=Hola%20EasyTech,%20quiero%20solicitar%20una%20cotización" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="whatsapp-float" 
+   aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Cotizar Ahora</span>
+</a>
+
