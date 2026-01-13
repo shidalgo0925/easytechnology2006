@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODOO-18 - EasyTech Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #714B67 0%, #A85CF9 100%);
+            color: white;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-btn:hover {
+            opacity: 0.8;
+        }
+
+        .project-header {
+            text-align: center;
+        }
+
+        .project-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: #fbbf24;
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .project-status {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            border: 2px solid #10b981;
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 2rem;
+        }
+
+        .nav-tabs .container {
+            display: flex;
+            gap: 0;
+        }
+
+        .tab-btn {
+            padding: 1rem 2rem;
+            border: none;
+            background: transparent;
+            color: #6b7280;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-btn.active {
+            color: #714B67;
+            border-bottom-color: #714B67;
+            background: #f8fafc;
+        }
+
+        .tab-btn:hover {
+            color: #714B67;
+            background: #f8fafc;
+        }
+
+        /* Content */
+        .content {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 2rem;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Demo Tab */
+        .demo-container {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .demo-iframe {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .demo-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #714B67;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5a3a52;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #10b981;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+
+        /* Details Tab */
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section p {
+            color: #6b7280;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .feature-item {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #714B67;
+        }
+
+        .feature-item h4 {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item p {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        /* Technologies Tab */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .tech-category {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .tech-category h4 {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Project Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .stat-item {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #714B67;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        /* Access Info */
+        .access-info {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .access-info h4 {
+            color: #92400e;
+            margin-bottom: 1rem;
+        }
+
+        .access-info p {
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 2rem;
+            }
+
+            .nav-tabs .container {
+                flex-wrap: wrap;
+            }
+
+            .tab-btn {
+                flex: 1;
+                min-width: 120px;
+            }
+
+            .demo-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .features-grid,
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .demo-iframe {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Volver a Portafolio
+            </a>
+            
+            <div class="project-header">
+                <div class="project-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h1 class="project-title">ODOO-18</h1>
+                <p class="project-subtitle">Sistema ERP Completo</p>
+                <span class="project-status">Completado</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+        <div class="container">
+            <button class="tab-btn active" onclick="showTab('details')">
+                <i class="fas fa-info-circle"></i> Detalles
+            </button>
+            <button class="tab-btn" onclick="showTab('technologies')">
+                <i class="fas fa-code"></i> Tecnologías
+            </button>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container">
+        <div class="content">
+            <!-- Details Tab -->
+            <div id="details-tab" class="tab-content active">
+                <div class="section">
+                    <h3><i class="fas fa-file-alt"></i> Descripción del Proyecto</h3>
+                    <p>Implementación completa de Odoo 18 como sistema ERP empresarial. Este proyecto incluye la instalación, configuración y personalización de Odoo 18 en Google Cloud Platform, con módulos específicos para contabilidad, inventario, CRM y gestión empresarial.</p>
+                    <p>El sistema está completamente operativo y desplegado en GCP con acceso web las 24 horas del día.</p>
+                </div>
+
+                <div class="section">
+                    <h3><i class="fas fa-star"></i> Características Principales</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <h4>Contabilidad Completa</h4>
+                            <p>Sistema de contabilidad con módulos avanzados para facturación, pagos y reportes financieros.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Gestión de Inventario</h4>
+                            <p>Control completo de stock, movimientos de inventario y gestión de almacenes.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>CRM Integrado</h4>
+                            <p>Gestión de clientes, oportunidades de venta y seguimiento de leads.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Recursos Humanos</h4>
+                            <p>Módulo de RRHH para gestión de empleados, nóminas y tiempo de trabajo.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Ventas y Compras</h4>
+                            <p>Procesos completos de ventas, compras y gestión de proveedores.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Reportes Avanzados</h4>
+                            <p>Generación de reportes personalizados y dashboards ejecutivos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Details Tab -->
+            <div id="details-tab" class="tab-content">
+                <div class="section">
+                    <h3><i class="fas fa-file-alt"></i> Descripción del Proyecto</h3>
+                    <p>Implementación completa de Odoo 18 como sistema ERP empresarial. Este proyecto incluye la instalación, configuración y personalización de Odoo 18 en Google Cloud Platform, con módulos específicos para contabilidad, inventario, CRM y gestión empresarial.</p>
+                    <p>El sistema está completamente operativo y desplegado en GCP con acceso web las 24 horas del día.</p>
+                </div>
+
+                <div class="section">
+                    <h3><i class="fas fa-star"></i> Características Principales</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <h4>Contabilidad Completa</h4>
+                            <p>Sistema de contabilidad con módulos avanzados para facturación, pagos y reportes financieros.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Gestión de Inventario</h4>
+                            <p>Control completo de stock, movimientos de inventario y gestión de almacenes.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>CRM Integrado</h4>
+                            <p>Gestión de clientes, oportunidades de venta y seguimiento de leads.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Recursos Humanos</h4>
+                            <p>Módulo de RRHH para gestión de empleados, nóminas y tiempo de trabajo.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Ventas y Compras</h4>
+                            <p>Procesos completos de ventas, compras y gestión de proveedores.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Reportes Avanzados</h4>
+                            <p>Generación de reportes personalizados y dashboards ejecutivos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3><i class="fas fa-chart-line"></i> Estado del Proyecto</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">Completado</span>
+                            <span class="stat-label">Completado</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">6</span>
+                            <span class="stat-label">Meses</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Desarrolladores</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Módulos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3><i class="fas fa-layer-group"></i> Áreas y Módulos Disponibles</h3>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h4>Finanzas</h4>
+                        <p>Facturación, cuentas por cobrar y pagar, conciliación bancaria, asientos contables, centros de costo, activos fijos, reportes fiscales y analítica financiera.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Ventas</h4>
+                        <p>Cotizaciones, órdenes de venta, listas de precios, promociones, políticas de descuento, firma electrónica y portal de clientes.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Compras</h4>
+                        <p>Solicitudes de presupuesto, órdenes de compra, control de proveedores, recibos, devoluciones y acuerdos marco.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Inventario y Logística</h4>
+                        <p>Multi‑almacén, ubicaciones, códigos de barras, lotes y series, reabastecimiento automático, rutas, cross‑docking, MRP y trazabilidad completa.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>CRM y Marketing</h4>
+                        <p>Pipeline comercial, seguimiento de leads, automatización de actividades, email marketing, SMS, campañas y segmentación.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Proyectos y Tareas</h4>
+                        <p>Gestión Kanban, planificación de hitos, hojas de tiempo, SLAs, colaboración y reportes de productividad.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Recursos Humanos</h4>
+                        <p>Empleados, asistencia, ausencias, nómina, evaluaciones, reclutamiento, portal del empleado y gastos.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Servicio al Cliente</h4>
+                        <p>Helpdesk con SLA, portal de tickets, base de conocimiento, encuestas de satisfacción y automatizaciones.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Website y e‑Commerce</h4>
+                        <p>Constructor visual, CMS, blog, foros, tienda en línea, pasarelas de pago, carritos y gestión de envíos.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Fabricación (MRP)</h4>
+                        <p>Listas de materiales (BOM), órdenes de producción, mantenimiento, calidad, planificación y control de WIP.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Punto de Venta (POS)</h4>
+                        <p>POS táctil, multi‑tienda, inventario integrado, descuentos, cupones, lealtad y reportes diarios.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Suscripciones</h4>
+                        <p>Planes, renovaciones, prorrateos, cobros automáticos, recordatorios y métricas MRR/Churn.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Firmas y Documentos</h4>
+                        <p>Gestión documental, flujos de aprobación, plantillas y firma electrónica integrada.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Integraciones</h4>
+                        <p>Correo, Google Workspace, Office 365, pasarelas de pago, mensajería y servicios externos vía API REST y webhooks.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technologies Tab -->
+            <div id="technologies-tab" class="tab-content">
+                <div class="tech-grid">
+                    <div class="tech-category">
+                        <h4><i class="fas fa-server"></i> Backend</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Odoo 18</span>
+                            <span class="tech-tag">Python 3.11</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Linux Ubuntu</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h4><i class="fas fa-cloud"></i> Infraestructura</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Google Cloud Platform</span>
+                            <span class="tech-tag">Compute Engine</span>
+                            <span class="tech-tag">Systemd</span>
+                            <span class="tech-tag">Nginx</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h4><i class="fas fa-database"></i> Base de Datos</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Database Manager</span>
+                            <span class="tech-tag">Backup Automático</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h4><i class="fas fa-tools"></i> Herramientas</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">SSH</span>
+                            <span class="tech-tag">SCP</span>
+                            <span class="tech-tag">Git</span>
+                            <span class="tech-tag">wkhtmltopdf</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Remove active class from all tab buttons
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons.forEach(button => button.classList.remove('active'));
+            
+            // Show selected tab content
+            document.getElementById(tabName + '-tab').classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

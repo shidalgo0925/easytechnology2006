@@ -1,0 +1,103 @@
+═══════════════════════════════════════════════════════════════
+  INSTRUCCIONES PARA SUBIR ARCHIVOS A NAMECHEAP POR FTP
+═══════════════════════════════════════════════════════════════
+
+📋 DATOS DE CONEXIÓN:
+  Servidor: ftp.easytech.services
+  Usuario:  9542cf8f@easytech.services
+  Puerto:   21
+  Protocolo: FTPS explícito
+
+═══════════════════════════════════════════════════════════════
+  MÉTODO 1: Usando lftp (Terminal - Recomendado)
+═══════════════════════════════════════════════════════════════
+
+1. Instalar lftp:
+   sudo apt-get install lftp
+
+2. Conectar al servidor:
+   lftp -u 9542cf8f@easytech.services -p 21 ftp.easytech.services
+
+3. Ingresar contraseña cuando se solicite
+
+4. Navegar al directorio correcto:
+   cd public_html
+   # O si hay subdirectorio:
+   # cd public_html/easytech.services
+
+5. Subir archivos (desde la carpeta easytech-prod local):
+   mirror -R --exclude-glob='*.backup*' \
+          --exclude-glob='*.md' \
+          --exclude-glob='.git*' \
+          --exclude-glob='build.py' \
+          --exclude-glob='ANALISIS_*' \
+          --exclude-glob='VERIFICACION_*' \
+          .
+
+6. Salir:
+   quit
+
+═══════════════════════════════════════════════════════════════
+  MÉTODO 2: Usando FileZilla (GUI - Más fácil)
+═══════════════════════════════════════════════════════════════
+
+1. Descargar FileZilla: https://filezilla-project.org/
+
+2. Abrir FileZilla y configurar:
+   - Host: ftp.easytech.services
+   - Usuario: 9542cf8f@easytech.services
+   - Contraseña: [tu contraseña FTP]
+   - Puerto: 21
+   - Protocolo: FTP - FTPS explícito sobre TLS
+
+3. Conectar
+
+4. En el panel izquierdo: Navegar a la carpeta easytech-prod local
+
+5. En el panel derecho: Navegar a public_html/ (o public_html/easytech.services/)
+
+6. Seleccionar y arrastrar archivos:
+   ✅ Subir:
+      - Todos los .html
+      - styles.css
+      - script.js
+      - service-worker.js
+      - manifest.json
+      - robots.txt
+      - sitemap.xml
+      - Carpeta assets/ completa
+   
+   ❌ NO subir:
+      - *.backup*
+      - *.md
+      - .git/
+      - build.py
+      - ANALISIS_*.md
+      - VERIFICACION_*.md
+
+═══════════════════════════════════════════════════════════════
+  MÉTODO 3: Usando cPanel File Manager (Más simple)
+═══════════════════════════════════════════════════════════════
+
+1. Login en cPanel: https://easytech.services:2083
+
+2. Ir a "File Manager"
+
+3. Navegar a public_html/
+
+4. Subir archivos usando el botón "Upload"
+
+5. O comprimir archivos localmente y subir el .zip, luego extraer
+
+═══════════════════════════════════════════════════════════════
+  VERIFICACIÓN POST-SUBIDA
+═══════════════════════════════════════════════════════════════
+
+Después de subir, verificar:
+1. https://easytech.services/ (debe cargar index.html)
+2. https://easytech.services/servicios.html
+3. https://easytech.services/contacto.html
+4. Verificar que las imágenes carguen: assets/images/logo.png
+5. Verificar que CSS y JS funcionen
+
+═══════════════════════════════════════════════════════════════

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .chatbot-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #714B67;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(113, 75, 103, 0.4);
+        }
+        .chatbot-container {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            width: 350px;
+            height: 400px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+            display: none;
+            flex-direction: column;
+        }
+        .chatbot-container.active {
+            display: flex;
+        }
+        .chatbot-header {
+            background: #714B67;
+            color: white;
+            padding: 1rem;
+            border-radius: 12px 12px 0 0;
+        }
+        .chatbot-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+        }
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            background: #f1f1f1;
+        }
+        .chatbot-input {
+            padding: 1rem;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 10px;
+        }
+        .chatbot-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+        }
+        .chatbot-input button {
+            background: #714B67;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test del Chatbot</h1>
+    <p>Este es un test simple del chatbot. Deberías ver un botón circular en la esquina inferior derecha.</p>
+    
+    <!-- Chatbot Toggle Button -->
+    <div class="chatbot-toggle" id="chatbotToggle">
+        💬
+    </div>
+
+    <!-- Chatbot Container -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <h3>EasyTech Assistant</h3>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message">
+                ¡Hola! Soy el asistente de EasyTech Services. ¿En qué puedo ayudarte?
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Escribe tu mensaje...">
+            <button id="chatbotSend">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatbotToggle = document.getElementById('chatbotToggle');
+            const chatbotContainer = document.getElementById('chatbotContainer');
+            const chatbotInput = document.getElementById('chatbotInput');
+            const chatbotSend = document.getElementById('chatbotSend');
+            const chatbotMessages = document.getElementById('chatbotMessages');
+            
+            console.log('Chatbot test loaded');
+            
+            // Toggle chatbot
+            chatbotToggle.addEventListener('click', function() {
+                console.log('Chatbot toggle clicked');
+                chatbotContainer.classList.toggle('active');
+            });
+            
+            // Send message
+            function sendMessage() {
+                const message = chatbotInput.value.trim();
+                if (message) {
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = 'message';
+                    messageDiv.textContent = 'Usuario: ' + message;
+                    chatbotMessages.appendChild(messageDiv);
+                    chatbotInput.value = '';
+                    
+                    // Bot response
+                    setTimeout(() => {
+                        const botDiv = document.createElement('div');
+                        botDiv.className = 'message';
+                        botDiv.textContent = 'Bot: Gracias por tu mensaje: ' + message;
+                        chatbotMessages.appendChild(botDiv);
+                    }, 1000);
+                }
+            }
+            
+            chatbotSend.addEventListener('click', sendMessage);
+            chatbotInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
