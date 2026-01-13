@@ -8,6 +8,9 @@
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="hG3rUTIS3IHOGtH4Cod22OBojtIcXte94P3KfA8tt9w" />
+    
     <!-- SEO Meta Tags -->
     <title>Desarrollo Web Panamá | Diseño Web Profesional | EasyTech Services</title>
     <meta name="description" content="Desarrollo web profesional en Panamá. Sitios web modernos, responsivos y optimizados para SEO. Diseñador gráfico incluido. Landing pages desde $250.">
@@ -62,18 +65,27 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
-                <li><a href="servicios.html" class="nav-link">Servicios</a></li>
-                <li><a href="portafolio.html" class="nav-link">Portafolio</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Servicios
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="servicios-it-empresas.html" class="dropdown-link">Servicios IT para Empresas</a></li>
+                        <li><a href="servicios.html" class="dropdown-link">Todos los Servicios</a></li>
+                        <li><a href="servicios.html#paquetes-web" class="dropdown-link">Paquetes Web</a></li>
+                    </ul>
+                </li>
+                <li><a href="portafolio.html" class="nav-link">Casos de Éxito</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
                 <li class="nav-item-dropdown">
                     <a href="#" class="nav-link dropdown-toggle">
                         Empresa
                         <i class="fas fa-chevron-down"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="paquetes-web.html" class="dropdown-link">Paquetes Web</a></li>
                         <li><a href="nosotros.html" class="dropdown-link">Nosotros</a></li>
                         <li><a href="contacto.html" class="dropdown-link">Contacto</a></li>
-                        <li><a href="blog.html" class="dropdown-link">Blog</a></li>
                         <li><a href="carreras.html" class="dropdown-link">Carreras</a></li>
                     </ul>
                 </li>
@@ -159,7 +171,7 @@
                 <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Precios y Planes</h3>
                 <p style="color: #6b7280; margin-bottom: 2rem;">Precios transparentes desde el inicio. Sin sorpresas.</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="paquetes-web.html" class="btn btn-primary">
+                    <a href="servicios.html#paquetes-web" class="btn btn-primary">
                         Ver Planes y Precios
                         <i class="fas fa-arrow-right"></i>
                     </a>

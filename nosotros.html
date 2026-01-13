@@ -8,9 +8,12 @@
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="hG3rUTIS3IHOGtH4Cod22OBojtIcXte94P3KfA8tt9w" />
+    
     <!-- SEO Meta Tags -->
     <title>Nosotros - EasyTech Services | Desarrollo Web Panamá | ¿Por qué Elegirnos?</title>
-    <meta name="description" content="Conoce EasyTech Services Panamá. Especialistas en desarrollo web con 5+ años de experiencia. 50+ proyectos, 30+ clientes. Diseñador gráfico incluido.">
+    <meta name="description" content="Conoce EasyTech Services Panamá. Especialistas en desarrollo web con 20 años de experiencia. 50+ proyectos, 30+ clientes. Diseñador gráfico incluido.">
     <meta name="keywords" content="easytech services panamá, desarrollo web panamá, empresa desarrollo web panamá, agencia web panamá, diseñador gráfico panamá">
     <meta name="author" content="EasyTech Services">
     <meta name="robots" content="index, follow">
@@ -20,14 +23,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://easytech.services/nosotros.html">
     <meta property="og:title" content="Nosotros - EasyTech Services | Desarrollo Web Panamá">
-    <meta property="og:description" content="Especialistas en desarrollo web con 5+ años de experiencia. 50+ proyectos, 30+ clientes. Diseñador gráfico incluido.">
+    <meta property="og:description" content="Especialistas en desarrollo web con 20 años de experiencia. 50+ proyectos, 30+ clientes. Diseñador gráfico incluido.">
     <meta property="og:image" content="https://easytech.services/assets/images/og-image.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://easytech.services/">
     <meta property="twitter:title" content="Nosotros - EasyTech Services">
-    <meta property="twitter:description" content="Especialistas en desarrollo web con 5+ años de experiencia. 50+ proyectos completados en Panamá.">
+    <meta property="twitter:description" content="Especialistas en desarrollo web con 20 años de experiencia. 50+ proyectos completados en Panamá.">
     <meta property="twitter:image" content="https://easytech.services/assets/images/twitter-image.jpg">
     
     <!-- Favicon -->
@@ -62,18 +65,27 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
-                <li><a href="servicios.html" class="nav-link">Servicios</a></li>
-                <li><a href="portafolio.html" class="nav-link">Portafolio</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Servicios
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="servicios-it-empresas.html" class="dropdown-link">Servicios IT para Empresas</a></li>
+                        <li><a href="servicios.html" class="dropdown-link">Todos los Servicios</a></li>
+                        <li><a href="servicios.html#paquetes-web" class="dropdown-link">Paquetes Web</a></li>
+                    </ul>
+                </li>
+                <li><a href="portafolio.html" class="nav-link">Casos de Éxito</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
                 <li class="nav-item-dropdown">
                     <a href="#" class="nav-link dropdown-toggle">
                         Empresa
                         <i class="fas fa-chevron-down"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="paquetes-web.html" class="dropdown-link">Paquetes Web</a></li>
                         <li><a href="nosotros.html" class="dropdown-link">Nosotros</a></li>
                         <li><a href="contacto.html" class="dropdown-link">Contacto</a></li>
-                        <li><a href="blog.html" class="dropdown-link">Blog</a></li>
                         <li><a href="carreras.html" class="dropdown-link">Carreras</a></li>
                     </ul>
                 </li>
@@ -122,7 +134,7 @@
                             <i class="fas fa-users"></i>
                             <div>
                                 <h4>Equipo Experto</h4>
-                                <p>Profesionales certificados con años de experiencia en el sector</p>
+                                <p>Profesionales certificados con 20 años de experiencia en el sector</p>
                             </div>
                         </div>
                         <div class="feature">
@@ -151,7 +163,7 @@
                         <p>Clientes Satisfechos</p>
                     </div>
                     <div class="stat">
-                        <h3>5+</h3>
+                        <h3>20</h3>
                         <p>Años de Experiencia</p>
                     </div>
                     <div class="stat">
@@ -169,7 +181,7 @@
             <div class="section-header" data-aos="fade-up" data-aos-duration="800">
                 <h2 class="section-title">¿Por qué Elegir EasyTech para tu Sitio Web?</h2>
                 <p class="section-description">
-                    Somos especialistas en desarrollo web con años de experiencia. 
+                    Somos especialistas en desarrollo web con 20 años de experiencia. 
                     Cada proyecto es único y lo tratamos con la dedicación que merece.
                 </p>
             </div>
@@ -207,7 +219,7 @@
                         <i class="fas fa-users"></i>
                     </div>
                     <h3>Equipo Experto</h3>
-                    <p>Desarrolladores y diseñadores con años de experiencia. Hemos completado más de 50 proyectos exitosos.</p>
+                    <p>Desarrolladores y diseñadores con 20 años de experiencia. Hemos completado más de 50 proyectos exitosos.</p>
                 </div>
                 <div class="why-item" data-aos="fade-up" data-aos-delay="600">
                     <div class="why-icon">
@@ -389,6 +401,46 @@
             "https://twitter.com/easytechservices",
             "https://github.com/easytech-services"
         ]
+    }
+    </script>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "EasyTech Services",
+        "url": "https://easytech.services",
+        "logo": "https://easytech.services/assets/images/logo.png",
+        "description": "Especialistas en desarrollo web con 20 años de experiencia. 50+ proyectos, 30+ clientes. Diseñador gráfico incluido.",
+        "foundingDate": "2004",
+        "numberOfEmployees": {
+            "@type": "QuantitativeValue",
+            "value": "10-50"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "PH, Camino de Cruces, Boulevard el Dorado, local 31",
+            "addressLocality": "Panamá",
+            "addressCountry": "PA"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+507-6184-2170",
+            "contactType": "customer service",
+            "areaServed": "PA",
+            "availableLanguage": ["es", "en"]
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/easytech-services",
+            "https://twitter.com/easytechservices",
+            "https://github.com/easytech-services"
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "30"
+        }
     }
     </script>
 </body>

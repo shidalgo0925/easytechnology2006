@@ -7,7 +7,7 @@
     <!-- Homepage -->
     <url>
         <loc>https://easytech.services/</loc>
-        <lastmod>2024-12-19</lastmod>
+        <lastmod>2025-01-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -15,35 +15,35 @@
     <!-- Main Pages -->
     <url>
         <loc>https://easytech.services/servicios.html</loc>
-        <lastmod>2024-12-19</lastmod>
+        <lastmod>2025-01-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>https://easytech.services/paquetes-web.html</loc>
-        <lastmod>2024-12-19</lastmod>
+        <loc>https://easytech.services/servicios-it-empresas.html</loc>
+        <lastmod>2025-01-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
         <loc>https://easytech.services/portafolio.html</loc>
-        <lastmod>2024-12-19</lastmod>
+        <lastmod>2025-01-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://easytech.services/nosotros.html</loc>
-        <lastmod>2024-12-19</lastmod>
+        <lastmod>2025-01-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
         <loc>https://easytech.services/contacto.html</loc>
-        <lastmod>2024-12-19</lastmod>
+        <lastmod>2025-01-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -51,21 +51,56 @@
     <!-- Service Pages -->
     <url>
         <loc>https://easytech.services/desarrollo-web-panama.html</loc>
-        <lastmod>2024-12-19</lastmod>
+        <lastmod>2025-01-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
         <loc>https://easytech.services/tienda-online-pymes.html</loc>
-        <lastmod>2024-12-19</lastmod>
+        <lastmod>2025-01-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
         <loc>https://easytech.services/integracion-odoo-crm.html</loc>
-        <lastmod>2024-12-19</lastmod>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://easytech.services/aplicaciones-moviles-panama.html</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://easytech.services/cloud-computing-panama.html</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://easytech.services/consultoria-it-panama.html</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://easytech.services/ciberseguridad-panama.html</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://easytech.services/automatizacion-procesos-panama.html</loc>
+        <lastmod>2025-01-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -73,7 +108,7 @@
     <!-- Blog -->
     <url>
         <loc>https://easytech.services/blog.html</loc>
-        <lastmod>2024-12-19</lastmod>
+        <lastmod>2025-01-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -81,7 +116,7 @@
     <!-- Careers -->
     <url>
         <loc>https://easytech.services/carreras.html</loc>
-        <lastmod>2024-12-19</lastmod>
+        <lastmod>2025-01-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>

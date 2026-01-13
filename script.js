@@ -92,12 +92,84 @@ window.addEventListener('scroll', () => {
 // Contact form handling - Connected to Odoo CRM
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
+    // Email validation function
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+    
+    // Phone validation function
+    function validatePhone(phone) {
+        if (!phone) return true; // Phone is optional
+        const re = /^[\d\s\-\+\(\)]+$/;
+        return re.test(phone) && phone.replace(/\D/g, '').length >= 7;
+    }
+    
+    // Real-time validation
+    const emailInput = contactForm.querySelector('#email');
+    const phoneInput = contactForm.querySelector('#phone');
+    const nameInput = contactForm.querySelector('#name');
+    
+    if (emailInput) {
+        emailInput.addEventListener('blur', function() {
+            if (this.value && !validateEmail(this.value)) {
+                this.setCustomValidity('Por favor, ingresa un email válido');
+                this.style.borderColor = '#ef4444';
+            } else {
+                this.setCustomValidity('');
+                this.style.borderColor = '';
+            }
+        });
+    }
+    
+    if (phoneInput) {
+        phoneInput.addEventListener('blur', function() {
+            if (this.value && !validatePhone(this.value)) {
+                this.setCustomValidity('Por favor, ingresa un teléfono válido');
+                this.style.borderColor = '#ef4444';
+            } else {
+                this.setCustomValidity('');
+                this.style.borderColor = '';
+            }
+        });
+    }
+    
+    if (nameInput) {
+        nameInput.addEventListener('blur', function() {
+            if (this.value && this.value.trim().length < 2) {
+                this.setCustomValidity('El nombre debe tener al menos 2 caracteres');
+                this.style.borderColor = '#ef4444';
+            } else {
+                this.setCustomValidity('');
+                this.style.borderColor = '';
+            }
+        });
+    }
+    
     contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         // Get form data
         const formData = new FormData(this);
         const data = Object.fromEntries(formData);
+        
+        // Validate email
+        if (!validateEmail(data.email)) {
+            showNotification('Por favor, ingresa un email válido', 'error');
+            return;
+        }
+        
+        // Validate phone if provided
+        if (data.phone && !validatePhone(data.phone)) {
+            showNotification('Por favor, ingresa un teléfono válido', 'error');
+            return;
+        }
+        
+        // Validate name
+        if (!data.name || data.name.trim().length < 2) {
+            showNotification('Por favor, ingresa tu nombre completo', 'error');
+            return;
+        }
         
         // Basic validation
         if (!data.name || !data.email || !data.subject || !data.message) {
@@ -1035,8 +1107,75 @@ function setActiveNavLink() {
     });
 }
 
+// PWA Functions
+function checkOnlineStatus() {
+    if (navigator.onLine) {
+        document.body.classList.remove('offline');
+        if (document.querySelector('.offline-banner')) {
+            document.querySelector('.offline-banner').remove();
+        }
+    } else {
+        document.body.classList.add('offline');
+        showOfflineBanner();
+    }
+}
+
+function showOfflineBanner() {
+    if (document.querySelector('.offline-banner')) return;
+    
+    const banner = document.createElement('div');
+    banner.className = 'offline-banner';
+    banner.innerHTML = `
+        <div style="background: #ef4444; color: white; padding: 12px; text-align: center; position: fixed; top: 0; left: 0; right: 0; z-index: 10000; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+            <i class="fas fa-wifi"></i> Sin conexión a internet. Algunas funciones pueden no estar disponibles.
+        </div>
+    `;
+    document.body.appendChild(banner);
+    document.body.style.paddingTop = '50px';
+}
+
+// App-like navigation (prevent full page reloads)
+function initAppNavigation() {
+    // Interceptar clicks en enlaces internos
+    document.querySelectorAll('a[href^="/"], a[href^="./"], a[href^="../"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Solo para navegación interna, no para descargas o enlaces externos
+            if (href && !href.startsWith('#') && !href.startsWith('http') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+                // Permitir navegación normal pero con transición suave
+                this.style.transition = 'opacity 0.3s ease';
+                this.style.opacity = '0.7';
+            }
+        });
+    });
+}
+
+// Local Storage para preferencias de usuario
+function initUserPreferences() {
+    // Tema (si se implementa en el futuro)
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    // Preferencias de notificaciones
+    if ('Notification' in window && Notification.permission === 'default') {
+        // Opcional: pedir permiso para notificaciones
+    }
+}
+
 // Initialize page
 document.addEventListener('DOMContentLoaded', function() {
+    // Check online status
+    checkOnlineStatus();
+    window.addEventListener('online', checkOnlineStatus);
+    window.addEventListener('offline', checkOnlineStatus);
+    
+    // Initialize user preferences
+    initUserPreferences();
+    
+    // Initialize app-like navigation
+    initAppNavigation();
+    
     // Set active nav link
     setActiveNavLink();
     // Initialize all animations

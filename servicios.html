@@ -8,6 +8,9 @@
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="hG3rUTIS3IHOGtH4Cod22OBojtIcXte94P3KfA8tt9w" />
+    
     <!-- SEO Meta Tags -->
     <title>Servicios - EasyTech Services | Desarrollo Web, Apps Móviles, Cloud Computing</title>
     <meta name="description" content="Servicios tecnológicos profesionales: Desarrollo Web, Apps Móviles, Cloud Computing, Consultoría IT, Ciberseguridad y Automatización en Panamá.">
@@ -25,7 +28,7 @@
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://easytech.services/">
+    <meta property="twitter:url" content="https://easytech.services/servicios.html">
     <meta property="twitter:title" content="Servicios Tecnológicos - EasyTech Services">
     <meta property="twitter:description" content="Desarrollo Web, Apps Móviles, Cloud Computing y más servicios tecnológicos en Panamá.">
     <meta property="twitter:image" content="https://easytech.services/assets/images/twitter-image.jpg">
@@ -62,18 +65,27 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
-                <li><a href="servicios.html" class="nav-link">Servicios</a></li>
-                <li><a href="portafolio.html" class="nav-link">Portafolio</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Servicios
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="servicios-it-empresas.html" class="dropdown-link">Servicios IT para Empresas</a></li>
+                        <li><a href="servicios.html" class="dropdown-link">Todos los Servicios</a></li>
+                        <li><a href="servicios.html#paquetes-web" class="dropdown-link">Paquetes Web</a></li>
+                    </ul>
+                </li>
+                <li><a href="portafolio.html" class="nav-link">Casos de Éxito</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
                 <li class="nav-item-dropdown">
                     <a href="#" class="nav-link dropdown-toggle">
                         Empresa
                         <i class="fas fa-chevron-down"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="paquetes-web.html" class="dropdown-link">Paquetes Web</a></li>
                         <li><a href="nosotros.html" class="dropdown-link">Nosotros</a></li>
                         <li><a href="contacto.html" class="dropdown-link">Contacto</a></li>
-                        <li><a href="blog.html" class="dropdown-link">Blog</a></li>
                         <li><a href="carreras.html" class="dropdown-link">Carreras</a></li>
                     </ul>
                 </li>
@@ -123,7 +135,7 @@
                         <li><i class="fas fa-check"></i> CMS personalizado</li>
                         <li><i class="fas fa-check"></i> Integración con redes sociales</li>
                     </ul>
-                    <a href="paquetes-web.html" class="btn btn-primary btn-service-cta">
+                    <a href="#paquetes-web" class="btn btn-primary btn-service-cta">
                         Ver Paquetes
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -232,6 +244,173 @@
                         Solicitar Cotización
                         <i class="fas fa-arrow-right"></i>
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Development Packages Section -->
+    <section class="web-packages" id="paquetes-web" style="padding: 80px 0; background: #f9fafb;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="section-title">Paquetes de Desarrollo Web</h2>
+                <p class="section-description">
+                    Soluciones web profesionales con <strong>diseñador gráfico incluido</strong>. Elige el paquete perfecto para tu negocio.
+                </p>
+            </div>
+            <div class="packages-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <!-- Landing Page Package -->
+                <div class="package-card" data-aos="fade-up" data-aos-delay="100" style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); border: 1px solid #e5e7eb; transition: all 0.3s ease;">
+                    <div class="package-header" style="text-align: center; margin-bottom: 1.5rem;">
+                        <div class="package-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, #2563eb, #1d4ed8); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i class="fas fa-window-maximize" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Landing Page</h3>
+                        <div class="package-price" style="margin-bottom: 1rem;">
+                            <span class="price-currency" style="font-size: 1.5rem; color: #6b7280;">$</span>
+                            <span class="price-amount" style="font-size: 3rem; font-weight: 700; color: #2563eb; margin: 0 0.25rem;">250</span>
+                            <span class="price-note" style="font-size: 0.875rem; color: #6b7280;">desde</span>
+                        </div>
+                        <div class="package-delivery" style="color: #6b7280; font-size: 0.875rem;">
+                            <i class="fas fa-clock" style="margin-right: 0.5rem;"></i> Entrega: 5-7 días
+                        </div>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features" style="list-style: none; padding: 0; margin-bottom: 2rem;">
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Diseño gráfico profesional incluido</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> 1 página principal responsive</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Formulario de contacto integrado</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Optimización SEO básica</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Integración con redes sociales</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Certificado SSL incluido</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Google Analytics básico</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Hosting 1 año incluido</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Asesoría gratuita incluida</li>
+                        </ul>
+                        <a href="contacto.html" class="btn btn-outline-primary btn-package-cta" data-package="landing-page" style="width: 100%; text-align: center; padding: 12px 24px; border: 2px solid #2563eb; color: #2563eb; background: transparent; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; display: inline-block;">
+                            Solicitar Cotización
+                            <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Corporate Website Package -->
+                <div class="package-card featured-package" data-aos="fade-up" data-aos-delay="200" style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(37, 99, 235, 0.15); border: 2px solid #2563eb; transition: all 0.3s ease; position: relative;">
+                    <div class="package-badge" style="position: absolute; top: -15px; right: 20px; background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #1f2937; padding: 8px 16px; border-radius: 20px; font-size: 0.875rem; font-weight: 600; box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);">Más Popular</div>
+                    <div class="package-header" style="text-align: center; margin-bottom: 1.5rem;">
+                        <div class="package-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, #2563eb, #1d4ed8); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i class="fas fa-building" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Sitio Web Corporativo</h3>
+                        <div class="package-price" style="margin-bottom: 1rem;">
+                            <span class="price-currency" style="font-size: 1.5rem; color: #6b7280;">$</span>
+                            <span class="price-amount" style="font-size: 3rem; font-weight: 700; color: #2563eb; margin: 0 0.25rem;">600</span>
+                            <span class="price-note" style="font-size: 0.875rem; color: #6b7280;">desde</span>
+                        </div>
+                        <div class="package-delivery" style="color: #6b7280; font-size: 0.875rem;">
+                            <i class="fas fa-clock" style="margin-right: 0.5rem;"></i> Entrega: 10-15 días
+                        </div>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features" style="list-style: none; padding: 0; margin-bottom: 2rem;">
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Diseñador gráfico profesional incluido</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Hasta 10 páginas</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Panel de administración (CMS)</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Blog integrado</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Galería de imágenes/videos</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Formularios de contacto múltiples</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Optimización SEO avanzada</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Google Analytics completo</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Certificado SSL incluido</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Hosting 1 año incluido</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Capacitación básica incluida</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #2563eb; margin-right: 0.5rem;"></i> Asesoría gratuita incluida</li>
+                        </ul>
+                        <a href="contacto.html" class="btn btn-primary btn-package-cta" data-package="sitio-corporativo" style="width: 100%; text-align: center; padding: 12px 24px; background: linear-gradient(135deg, #2563eb, #1d4ed8); color: white; border: none; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; display: inline-block;">
+                            Solicitar Cotización
+                            <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Corporate Portal Package -->
+                <div class="package-card" data-aos="fade-up" data-aos-delay="300" style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); border: 1px solid #e5e7eb; transition: all 0.3s ease;">
+                    <div class="package-header" style="text-align: center; margin-bottom: 1.5rem;">
+                        <div class="package-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i class="fas fa-sitemap" style="font-size: 2rem; color: white;"></i>
+                        </div>
+                        <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937;">Portal Corporativo</h3>
+                        <div class="package-price" style="margin-bottom: 1rem;">
+                            <span class="price-currency" style="font-size: 1.5rem; color: #6b7280;">$</span>
+                            <span class="price-amount" style="font-size: 3rem; font-weight: 700; color: #667eea; margin: 0 0.25rem;">999</span>
+                            <span class="price-note" style="font-size: 0.875rem; color: #6b7280;">desde</span>
+                        </div>
+                        <div class="package-delivery" style="color: #6b7280; font-size: 0.875rem;">
+                            <i class="fas fa-clock" style="margin-right: 0.5rem;"></i> Entrega: 20-30 días
+                        </div>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features" style="list-style: none; padding: 0; margin-bottom: 2rem;">
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem;"></i> Diseñador gráfico profesional incluido</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem;"></i> Páginas ilimitadas</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem;"></i> Panel de administración avanzado</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem;"></i> Sistema de usuarios y roles</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem;"></i> Blog con categorías</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem;"></i> Galería multimedia avanzada</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem;"></i> Área de miembros/clientes</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem;"></i> Integración con APIs externas</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem;"></i> Optimización SEO profesional</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem;"></i> Google Analytics + Search Console</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem;"></i> Certificado SSL incluido</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem;"></i> Hosting 1 año incluido</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem;"></i> Soporte técnico 3 meses</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem;"></i> Capacitación completa</li>
+                            <li style="padding: 0.75rem 0; color: #4b5563;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem;"></i> Asesoría gratuita incluida</li>
+                        </ul>
+                        <a href="contacto.html" class="btn btn-outline-primary btn-package-cta" data-package="portal-corporativo" style="width: 100%; text-align: center; padding: 12px 24px; border: 2px solid #667eea; color: #667eea; background: transparent; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; display: inline-block;">
+                            Solicitar Cotización
+                            <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Benefits Section -->
+            <div class="package-benefits" data-aos="fade-up" data-aos-delay="400" style="margin-top: 4rem;">
+                <h3 class="benefits-title" style="text-align: center; font-size: 2rem; font-weight: 600; margin-bottom: 2rem; color: #1f2937;">
+                    <i class="fas fa-gift" style="color: #2563eb; margin-right: 0.5rem;"></i> Beneficios Incluidos en Todos los Paquetes
+                </h3>
+                <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <div class="benefit-item" style="text-align: center; padding: 1.5rem; background: white; border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+                        <i class="fas fa-palette" style="font-size: 2.5rem; color: #2563eb; margin-bottom: 1rem;"></i>
+                        <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: #1f2937;">Diseñador Gráfico</h4>
+                        <p style="color: #6b7280; line-height: 1.6;">Diseño profesional incluido en todos los paquetes. Trabajamos con diseñadores gráficos certificados.</p>
+                    </div>
+                    <div class="benefit-item" style="text-align: center; padding: 1.5rem; background: white; border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+                        <i class="fas fa-comments" style="font-size: 2.5rem; color: #2563eb; margin-bottom: 1rem;"></i>
+                        <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: #1f2937;">Asesoría Gratuita</h4>
+                        <p style="color: #6b7280; line-height: 1.6;">Consulta inicial sin costo para planificar tu proyecto. Analizamos tus necesidades.</p>
+                    </div>
+                    <div class="benefit-item" style="text-align: center; padding: 1.5rem; background: white; border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+                        <i class="fas fa-shield-alt" style="font-size: 2.5rem; color: #2563eb; margin-bottom: 1rem;"></i>
+                        <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: #1f2937;">Garantía de Satisfacción</h4>
+                        <p style="color: #6b7280; line-height: 1.6;">Revisiones y ajustes ilimitados hasta quedar completamente satisfecho.</p>
+                    </div>
+                    <div class="benefit-item" style="text-align: center; padding: 1.5rem; background: white; border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+                        <i class="fas fa-headset" style="font-size: 2.5rem; color: #2563eb; margin-bottom: 1rem;"></i>
+                        <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: #1f2937;">Soporte Post-Entrega</h4>
+                        <p style="color: #6b7280; line-height: 1.6;">Asistencia técnica continua después de la entrega. Te ayudamos con cualquier duda.</p>
+                    </div>
+                    <div class="benefit-item" style="text-align: center; padding: 1.5rem; background: white; border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+                        <i class="fas fa-mobile-alt" style="font-size: 2.5rem; color: #2563eb; margin-bottom: 1rem;"></i>
+                        <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: #1f2937;">100% Responsive</h4>
+                        <p style="color: #6b7280; line-height: 1.6;">Todos nuestros sitios se adaptan perfectamente a móviles, tablets y desktop.</p>
+                    </div>
+                    <div class="benefit-item" style="text-align: center; padding: 1.5rem; background: white; border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+                        <i class="fas fa-search" style="font-size: 2.5rem; color: #2563eb; margin-bottom: 1rem;"></i>
+                        <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: #1f2937;">SEO Optimizado</h4>
+                        <p style="color: #6b7280; line-height: 1.6;">Optimización para motores de búsqueda incluida. Tu sitio aparecerá en Google.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -406,6 +585,68 @@
             "https://twitter.com/easytechservices",
             "https://github.com/easytech-services"
         ]
+    }
+    </script>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Desarrollo Web y Transformación Digital",
+        "provider": {
+            "@type": "Organization",
+            "name": "EasyTech Services",
+            "url": "https://easytech.services",
+            "logo": "https://easytech.services/assets/images/logo.png",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "PH, Camino de Cruces, Boulevard el Dorado, local 31",
+                "addressLocality": "Panamá",
+                "addressCountry": "PA"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+507-6184-2170",
+                "contactType": "customer service",
+                "areaServed": "PA",
+                "availableLanguage": ["es", "en"]
+            }
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "Panamá"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios de Desarrollo Web",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Desarrollo Web",
+                        "description": "Sitios web modernos, responsivos y optimizados para SEO"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Automatización de Procesos",
+                        "description": "Automatización de procesos empresariales con Odoo CRM y WhatsApp Business"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Marketing Digital",
+                        "description": "Estrategias de marketing digital para aumentar ventas online"
+                    }
+                }
+            ]
+        }
     }
     </script>
 </body>

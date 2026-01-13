@@ -8,8 +8,11 @@
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="hG3rUTIS3IHOGtH4Cod22OBojtIcXte94P3KfA8tt9w" />
+    
     <!-- SEO Meta Tags -->
-    <title>Contacto - EasyTech Services | Cotización en 24h | Asesoría Gratuita</title>
+    <title>Contacto - EasyTech Services | Cotización en 2 Minutos | Asesoría Gratuita</title>
     <meta name="description" content="Contacta con EasyTech Services. Solicita tu cotización en 2 minutos. Respuesta en 24 horas. Email: info@easytech.services, WhatsApp: +507 6974-4086.">
     <meta name="keywords" content="contacto easytech, cotización desarrollo web panamá, asesoría gratuita, consultoría IT panamá">
     <meta name="author" content="EasyTech Services">
@@ -19,15 +22,15 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://easytech.services/contacto.html">
-    <meta property="og:title" content="Contacto - EasyTech Services | Cotización en 24h">
-    <meta property="og:description" content="Solicita tu cotización en 2 minutos. Respuesta en 24 horas. Email: info@easytech.services, WhatsApp: +507 6974-4086.">
+    <meta property="og:title" content="Contacto - EasyTech Services | Cotización en 2 Minutos">
+    <meta property="og:description" content="Solicita tu cotización en 2 minutos. Respuesta inmediata. Email: info@easytech.services, WhatsApp: +507 6974-4086.">
     <meta property="og:image" content="https://easytech.services/assets/images/og-image.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://easytech.services/">
+    <meta property="twitter:url" content="https://easytech.services/contacto.html">
     <meta property="twitter:title" content="Contacto - EasyTech Services">
-    <meta property="twitter:description" content="Solicita tu cotización en 2 minutos. Respuesta en 24 horas. Asesoría gratuita.">
+    <meta property="twitter:description" content="Solicita tu cotización en 2 minutos. Respuesta inmediata. Asesoría gratuita.">
     <meta property="twitter:image" content="https://easytech.services/assets/images/twitter-image.jpg">
     
     <!-- Favicon -->
@@ -62,18 +65,27 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
-                <li><a href="servicios.html" class="nav-link">Servicios</a></li>
-                <li><a href="portafolio.html" class="nav-link">Portafolio</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Servicios
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="servicios-it-empresas.html" class="dropdown-link">Servicios IT para Empresas</a></li>
+                        <li><a href="servicios.html" class="dropdown-link">Todos los Servicios</a></li>
+                        <li><a href="servicios.html#paquetes-web" class="dropdown-link">Paquetes Web</a></li>
+                    </ul>
+                </li>
+                <li><a href="portafolio.html" class="nav-link">Casos de Éxito</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
                 <li class="nav-item-dropdown">
                     <a href="#" class="nav-link dropdown-toggle">
                         Empresa
                         <i class="fas fa-chevron-down"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="paquetes-web.html" class="dropdown-link">Paquetes Web</a></li>
                         <li><a href="nosotros.html" class="dropdown-link">Nosotros</a></li>
                         <li><a href="contacto.html" class="dropdown-link">Contacto</a></li>
-                        <li><a href="blog.html" class="dropdown-link">Blog</a></li>
                         <li><a href="carreras.html" class="dropdown-link">Carreras</a></li>
                     </ul>
                 </li>
@@ -109,7 +121,7 @@
                         <div>
                             <h4>Email Principal</h4>
                             <p>info@easytech.services</p>
-                            <small>Respuesta en 24 horas</small>
+                            <small>Respuesta inmediata</small>
                         </div>
                     </div>
                     <div class="contact-item" data-aos="fade-up" data-aos-delay="200">
@@ -165,7 +177,7 @@
                 <div class="contact-form-section" data-aos="fade-left" data-aos-duration="800">
                     <h3>Solicita tu Cotización en 2 Minutos</h3>
                     <p class="form-description">
-                        Completa este formulario corto y recibe una <strong>cotización en 24 horas</strong>. 
+                        Completa este formulario corto y recibe una <strong>cotización en 2 minutos</strong>. 
                         <strong>Asesoría gratuita</strong> incluida. Sin compromisos.
                     </p>
                     <form class="contact-form" id="contactForm">
@@ -181,6 +193,11 @@
                         <div class="form-group">
                             <select id="service" name="service" required>
                                 <option value="">¿Qué servicio necesitas?</option>
+                                <optgroup label="Servicios IT para Empresas">
+                                    <option value="servicios-it">Servicios IT para Empresas</option>
+                                    <option value="soporte-tecnico">Soporte Técnico Empresarial</option>
+                                    <option value="consultoria-it">Consultoría IT</option>
+                                </optgroup>
                                 <optgroup label="Desarrollo Web">
                                     <option value="landing-page">Landing Page (Desde $250)</option>
                                     <option value="sitio-corporativo">Sitio Web Corporativo (Desde $600)</option>
@@ -191,7 +208,7 @@
                                     <option value="odoo-crm">Integración Odoo / CRM</option>
                                     <option value="apps-moviles">Aplicaciones Móviles</option>
                                     <option value="automatizacion">Automatización</option>
-                                    <option value="asesoria-gratuita">Asesoría Gratuita</option>
+                                    <option value="diagnostico-it">Diagnóstico IT Gratuito</option>
                                 </optgroup>
                             </select>
                         </div>
@@ -207,7 +224,7 @@
                         </div>
                         <div class="form-note">
                             <i class="fas fa-shield-alt"></i>
-                            <small>Tu información está segura. Respondemos en menos de 24 horas.</small>
+                            <small>Tu información está segura. Respondemos inmediatamente.</small>
                         </div>
                         <button type="submit" class="btn btn-primary btn-submit-large">
                             <span>Solicitar Cotización Ahora</span>
@@ -234,7 +251,7 @@
                 <div class="contact-option" data-aos="fade-up" data-aos-delay="200">
                     <i class="fas fa-file-alt"></i>
                     <h4>Cotización Rápida</h4>
-                    <p>Obtén una cotización preliminar en menos de 24 horas</p>
+                    <p>Obtén una cotización preliminar en 2 minutos</p>
                     <a href="https://wa.me/50769744086?text=Hola%20EasyTech,%20necesito%20una%20cotización" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Solicitar Cotización</a>
                 </div>
                 <div class="contact-option" data-aos="fade-up" data-aos-delay="300">
